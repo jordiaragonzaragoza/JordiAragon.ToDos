@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JordiAragon.ToDos.Infrastructure</name>
+    </assembly>
+    <members>
+        <member name="T:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.LocationTypeRequest">
+            <summary>
+            Location Type.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.LocationTypeRequest.Rooftop">
+            <summary>
+            Indicates that the returned result is a precise geocode for which we have location information accurate down to street address precision.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.LocationTypeRequest.Range_Interpolated">
+            <summary>
+            Indicates that the returned result reflects an approximation (usually on a road) interpolated between two precise points (such as intersections).
+            Interpolated results are generally returned when rooftop geocodes are unavailable for a street address.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.LocationTypeRequest.Geometric_Center">
+            <summary>
+            Indicates that the returned result is the geometric center of a result such as a polyline
+            (for example, a street) or polygon (region).
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.LocationTypeRequest.Approximate">
+            <summary>
+            Indicates that the returned result is approximate.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Street_Address">
+            <summary>
+            Indicates a precise street address.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Route">
+            <summary>
+            Indicates a named route (such as "US 101").
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Intersection">
+            <summary>
+            Indicates a major intersection, usually of two major roads.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Political">
+            <summary>
+            Indicates a political entity. Usually, this type indicates a polygon of some civil administration.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Country">
+            <summary>
+            Indicates the national political entity, and is typically the highest order type returned by the Geocoder.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Administrative_Area_Level_1">
+            <summary>
+            Indicates a first-order civil entity below the country level. Within the United States,
+            these administrative levels are states. Not all nations exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Administrative_Area_Level_2">
+            <summary>
+            Indicates a second-order civil entity below the country level. Within the United States,
+            these administrative levels are counties. Not all nations exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Administrative_Area_Level_3">
+            <summary>
+            Indicates a third-order civil entity below the country level. This type indicates a minor civil division.
+            Not all nations exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Administrative_Area_Level_4">
+            <summary>
+            Indicates a fourth-order civil entity below the country level. This type indicates a minor civil division.
+            Not all nations exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Administrative_Area_Level_5">
+            <summary>
+            Indicates a fifth-order civil entity below the country level. This type indicates a minor civil division.
+            Not all nations exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Administrative_Area_Level_6">
+            <summary>
+            Indicates a sixth-order civil entity below the country level. This type indicates a minor civil division.
+            Not all nations exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Administrative_Area_Level_7">
+            <summary>
+            Indicates a seventh-order civil entity below the country level. This type indicates a minor civil division.
+            Not all nations exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Colloquial_Area">
+            <summary>
+            Indicates a commonly-used alternative name for the entity.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Locality">
+            <summary>
+            Indicates an incorporated city or town political entity.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Sublocality">
+            <summary>
+            locality.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Neighborhood">
+            <summary>
+            Indicates a named neighborhood.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Premise">
+            <summary>
+            Indicates a named location, usually a building or collection of buildings with a common name.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Subpremise">
+            <summary>
+            Indicates a first-order entity below a named location, usually a singular building within a collection of buildings with a common name.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Plus_Code">
+            <summary>
+            Indicates an encoded location reference, derived from latitude and longitude.
+            <para/>
+            Plus codes can be used as a replacement for street addresses in places where they do not exist
+            (where buildings are not numbered or streets are not named).
+            <para/>
+            See <see href="https://plus.codes"/> for details.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Postal_Code">
+            <summary>
+            Indicates a postal code as used to address postal mail within the country.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Natural_Feature">
+            <summary>
+            Indicates a prominent natural feature.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Airport">
+            <summary>
+            Airport.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Park">
+            <summary>
+            Park.
+            </summary>
+        </member>
+        <member name="F:JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest.Point_Of_Interest">
+            <summary>
+            Indicates a named point of interest. Typically, these "POI"s are prominent local entities that don't easily fit in another category such as "Empire State Building" or "Statue of Liberty".
+            </summary>
+        </member>
+        <member name="T:Refit.Implementation.Generated">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.JordiAragonToDosInfrastructureGeolocationGoogleMapsIGoogleMapsWebApi">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.JordiAragonToDosInfrastructureGeolocationGoogleMapsIGoogleMapsWebApi.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.JordiAragonToDosInfrastructureGeolocationGoogleMapsIGoogleMapsWebApi.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.JordiAragonToDosInfrastructureGeolocationGoogleMapsIGoogleMapsWebApi.GetGeocodeFromAddressAsync(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.JordiAragonToDosInfrastructureGeolocationGoogleMapsIGoogleMapsWebApi.GetGeocodeFromCoordinatesAsync(System.String,JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.LocationTypeRequest,JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.JordiAragonToDosInfrastructureGeolocationGoogleMapsIGoogleMapsWebApi.JordiAragon#ToDos#Infrastructure#Geolocation#GoogleMaps#IGoogleMapsWebApi#GetGeocodeFromAddressAsync(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.JordiAragonToDosInfrastructureGeolocationGoogleMapsIGoogleMapsWebApi.JordiAragon#ToDos#Infrastructure#Geolocation#GoogleMaps#IGoogleMapsWebApi#GetGeocodeFromCoordinatesAsync(System.String,JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.LocationTypeRequest,JordiAragon.ToDos.Infrastructure.Geolocation.GoogleMaps.Geocode.Requests.ResultTypeRequest,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
