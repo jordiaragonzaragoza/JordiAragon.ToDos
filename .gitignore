@@ -370,4 +370,7 @@ ASALocalRun/
 .localhistory/
 
 # Azure SQL Edge
-containers/azuresqledge/
+containers/azuresqledge/.system
+containers/azuresqledge/data
+containers/azuresqledge/log
+containers/azuresqledge/secrets

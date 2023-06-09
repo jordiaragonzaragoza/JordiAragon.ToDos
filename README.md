@@ -5,14 +5,18 @@ The ToDos Project is a project written in .NET 7.
 The goal of this project is implement the most common used technologies and practice to masterize the best way to develop great applications with .NET
 
 ## How to use:
-- You will need the latest Visual Studio 2022 and the latest .NET Core SDK.
+- You will need the latest Visual Studio 2022 and the latest .NET Core SDK (at least .NET 7 SDK).
 - You will need also Docker Desktop running on your machine.
 - To use SetCoordinates on ToDoItem a Google Maps API Key is required.
-- To run the project just find and build the solution file JordiAragon.ToDos.sln and use docker-compose
+- To run the project just find and build the solution file JordiAragon.ToDos-Services.sln and use docker-compose
 - Also Create the database and schema with .NET Core CLI using update command like this:
 
 ```
-dotnet ef database update -p /Users/jordiaragonzaragoza/GitHub/JordiAragon.TrainingSpace/Backend/Provisioned/JordiAragon.ToDos/src/JordiAragon.ToDos.Infrastructure.EntityFramework/JordiAragon.ToDos.Infrastructure.EntityFramework.csproj -s /Users/jordiaragonzaragoza/GitHub/JordiAragon.TrainingSpace/Backend/Provisioned/JordiAragon.ToDos/src/JordiAragon.ToDos/JordiAragon.ToDos.csproj --connection "Server=localhost;Database=JordiAragon.ToDosDb;User Id=sa;Password=@someThingComplicated1234;Trusted_Connection=false;TrustServerCertificate=true;"
+dotnet ef database update -p /Users/jordiaragonzaragoza/GitHub/JordiAragon.ToDos/services/JordiAragon.ToDos/src/JordiAragon.ToDos.Infrastructure.EntityFramework/JordiAragon.ToDos.Infrastructure.EntityFramework.csproj -s /Users/jordiaragonzaragoza/GitHub/JordiAragon.ToDos/services/JordiAragon.ToDos/src/JordiAragon.ToDos/JordiAragon.ToDos.csproj --connection "Server=localhost;Database=JordiAragon.ToDosDb;User Id=sa;Password=@someThingComplicated1234;Trusted_Connection=false;TrustServerCertificate=true;"
+```
+
+```
+dotnet ef database update -p /Users/jordiaragonzaragoza/GitHub/JordiAragon.ToDos/services/JordiAragon.MessageHub/src/JordiAragon.MessageHub.Infrastructure.EntityFramework/JordiAragon.MessageHub.Infrastructure.EntityFramework.csproj -s /Users/jordiaragonzaragoza/GitHub/JordiAragon.ToDos/services/JordiAragon.MessageHub/src/JordiAragon.MessageHub/JordiAragon.MessageHub.csproj --connection "Server=localhost;Database=JordiAragon.MessageHubDb;User Id=sa;Password=@someThingComplicated1234;Trusted_Connection=false;TrustServerCertificate=true;"
 ```
 
 ## Architecture:
@@ -31,20 +35,26 @@ dotnet ef database update -p /Users/jordiaragonzaragoza/GitHub/JordiAragon.Train
 - Custom API Error Handling
 - Domain UnitTests
 
+## Custom Shared Kernel:
+- This project uses [JordiAragon.SharedKernel](https://github.com/jordiaragonzaragoza/JordiAragon.SharedKernel) building blocks to follow DDD principles and Clean Architecture. 
+
+## Diagram:
+
+![JordiAragon.Cinema - Clean architecture graph](./docs/CleanArchitecture.jpg)
+
 ## Technologies implemented:
 
 - ASP.NET 7.0
- - ASP.NET Core WebApi with JWT Bearer Authentication
+- ASP.NET Core WebApi with JWT Bearer Authentication
 - Entity Framework Core 7.0
 - MediatR
 - AutoMapper
 - Autofac
 - MassTransit
-- Ardalis Libraries
- - Ardalis.Result
- - Ardalis.Specification
- - Ardalis.SmartEnums
- - Ardalis.GuardClauses
+- Ardalis.Result
+- Ardalis.Specification
+- Ardalis.SmartEnums
+- Ardalis.GuardClauses
 - FluentValidator
 - Serilog
 - Quartz
@@ -57,6 +67,10 @@ dotnet ef database update -p /Users/jordiaragonzaragoza/GitHub/JordiAragon.Train
 - xUnit & FluentAssertions
 
 ## Features (Pending to complete)
+
+**Separation of concerns by bounded context**
+- Check JordiAragon.ToDos.sln. It is a core domain which responsibility manage the ToDos.
+- Check JordiAragon.Message.sln. It is a message hub microservice which responsibility is to send messages as abstract hub.
 
 **Account**
 - Generate JWT Bearer.
@@ -83,9 +97,6 @@ dotnet ef database update -p /Users/jordiaragonzaragoza/GitHub/JordiAragon.Train
 
 **Export Project ToDo Items to CSV**
 - Export ToDo Items to CSV using CsvHelper library.
-
-**Separation of concerns by bounded context**
-- Check JordiAragon.Message Hub microservice which responsibility is to send messages as abstract hub.
 
 **Cross-cutting concerns**
 - Outbox pattern to handle the domain event out side the source transaction.
