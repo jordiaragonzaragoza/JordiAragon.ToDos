@@ -6,6 +6,7 @@
     using JordiAragon.ToDos.Application.Contracts.AssemblyConfiguration;
     using JordiAragon.ToDos.Domain.AssemblyConfiguration;
     using JordiAragon.ToDos.Infrastructure.AssemblyConfiguration;
+    using JordiAragon.ToDos.Infrastructure.EntityFramework;
     using JordiAragon.ToDos.Infrastructure.EntityFramework.AssemblyConfiguration;
     using JordiAragon.ToDos.Presentation.IntegrationMessages.AssemblyConfiguration;
     using JordiAragon.ToDos.Presentation.WebApi.AssemblyConfiguration;
@@ -59,6 +60,8 @@
             var app = builder.Build();
 
             ConfigureWebApplication.AddWebApplicationConfigurations(app);
+
+            SeedData.Initialize(app, builder.Environment.EnvironmentName == "Development");
 
             app.Run();
         }
