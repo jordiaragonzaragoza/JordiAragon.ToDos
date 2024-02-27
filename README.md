@@ -8,16 +8,7 @@ The goal of this project is implement the most common used technologies and prac
 - You will need the latest Visual Studio 2022 and the latest .NET Core SDK (at least .NET 7 SDK).
 - You will need also Docker Desktop running on your machine.
 - To use SetCoordinates on ToDoItem a Google Maps API Key is required.
-- To run the project just find and build the solution file JordiAragon.ToDos-Services.sln and use docker-compose
-- Also Create the database and schema with .NET Core CLI using update command like this:
-
-```
-dotnet ef database update -p /Users/jordiaragonzaragoza/GitHub/JordiAragon.ToDos/services/JordiAragon.ToDos/src/JordiAragon.ToDos.Infrastructure.EntityFramework/JordiAragon.ToDos.Infrastructure.EntityFramework.csproj -s /Users/jordiaragonzaragoza/GitHub/JordiAragon.ToDos/services/JordiAragon.ToDos/src/JordiAragon.ToDos/JordiAragon.ToDos.csproj --connection "Server=localhost;Database=JordiAragon.ToDosDb;User Id=sa;Password=@someThingComplicated1234;Trusted_Connection=false;TrustServerCertificate=true;"
-```
-
-```
-dotnet ef database update -p /Users/jordiaragonzaragoza/GitHub/JordiAragon.ToDos/services/JordiAragon.MessageHub/src/JordiAragon.MessageHub.Infrastructure.EntityFramework/JordiAragon.MessageHub.Infrastructure.EntityFramework.csproj -s /Users/jordiaragonzaragoza/GitHub/JordiAragon.ToDos/services/JordiAragon.MessageHub/src/JordiAragon.MessageHub/JordiAragon.MessageHub.csproj --connection "Server=localhost;Database=JordiAragon.MessageHubDb;User Id=sa;Password=@someThingComplicated1234;Trusted_Connection=false;TrustServerCertificate=true;"
-```
+- To run the project just find and build the solution file JordiAragon.ToDos-Services.sln and use docker-compose as startup project.
 
 ## Architecture:
 
@@ -36,7 +27,7 @@ dotnet ef database update -p /Users/jordiaragonzaragoza/GitHub/JordiAragon.ToDos
 - Domain UnitTests
 
 ## Custom Shared Kernel:
-- This project uses [JordiAragon.SharedKernel](https://github.com/jordiaragonzaragoza/JordiAragon.SharedKernel) building blocks to follow DDD principles and Clean Architecture. 
+- This project uses [JordiAragon.SharedKernel v1.0.0](https://github.com/jordiaragonzaragoza/JordiAragon.SharedKernel) building blocks to follow DDD principles and Clean Architecture. 
 
 ## Diagram:
 
@@ -113,6 +104,9 @@ dotnet ef database update -p /Users/jordiaragonzaragoza/GitHub/JordiAragon.ToDos
  - CachingBehavior and InvalidateCachingBehavior to apply/remove requests to the cache.
  - DomainEventsDispatcherBehaviour to dispatch domain events before complete the transation.
  - PerformanceBehaviour to track the execution time performance.
+
+## See also this other repository which is the next step on this project.
+- [JordiAragon.Cinema](https://github.com/jordiaragonzaragoza/JordiAragon.Cinema) is microservices project with various bounded contexts and complex domain rules.
 
 ## Resources and Inspiration
 

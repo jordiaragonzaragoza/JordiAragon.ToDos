@@ -3,6 +3,7 @@
     using System.Net.Http;
     using System.Threading.Tasks;
     using Ardalis.HttpClientTestExtensions;
+    using JordiAragon.ToDos.Infrastructure.EntityFramework;
     using JordiAragon.ToDos.Presentation.WebApi.Contracts.V1.Contributors.Responses;
     using Xunit;
 
