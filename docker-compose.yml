@@ -7,12 +7,6 @@ services:
     build:
       context: .
       dockerfile: services/JordiAragon.ToDos/src/JordiAragon.ToDos/Dockerfile
-    depends_on:
-      - "azuresqledge"
-      - "rabbitmq"
-    links:
-      - "azuresqledge"
-      - "rabbitmq"
 
   jordiaragon.messagehub:
     image: ${DOCKER_REGISTRY-}jordiaragon.messagehub
@@ -20,12 +14,6 @@ services:
     build:
       context: .
       dockerfile: services/JordiAragon.MessageHub/src/JordiAragon.MessageHub/Dockerfile
-    depends_on:
-      - "azuresqledge"
-      - "rabbitmq"
-    links:
-      - "azuresqledge"
-      - "rabbitmq"
 
   azuresqledge:
     image: mcr.microsoft.com/azure-sql-edge:latest
