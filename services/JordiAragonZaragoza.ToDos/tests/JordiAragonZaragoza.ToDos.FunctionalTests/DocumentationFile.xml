@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JordiAragonZaragoza.ToDos.FunctionalTests</name>
+    </assembly>
+    <members>
+        <member name="M:JordiAragonZaragoza.ToDos.FunctionalTests.CustomWebApplicationFactory`1.CreateHost(Microsoft.Extensions.Hosting.IHostBuilder)">
+            <summary>
+            Overriding CreateHost to avoid creating a separate ServiceProvider per
+            <see href="https://github.com/dotnet-architecture/eShopOnWeb/issues/465">this thread</see>.
+            </summary>
+            <param name="builder">The builder.</param>
+            <returns>A host intance.</returns>
+        </member>
+    </members>
+</doc>

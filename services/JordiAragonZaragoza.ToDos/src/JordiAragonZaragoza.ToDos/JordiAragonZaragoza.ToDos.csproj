@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+	<Sdk Name="Microsoft.Build.CentralPackageVersions" Version="2.1.3" />
+	<PropertyGroup>
+	  <DockerComposeProjectPath>../../docker-compose.dcproj</DockerComposeProjectPath>
+	  <UserSecretsId>71462ee6-5b91-4419-9b35-a015de689fe0</UserSecretsId>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Autofac.Extensions.DependencyInjection" />
+    </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\JordiAragonZaragoza.ToDos.Application\JordiAragonZaragoza.ToDos.Application.csproj" />
+		<ProjectReference Include="..\JordiAragonZaragoza.ToDos.Infrastructure\JordiAragonZaragoza.ToDos.Infrastructure.csproj" />
+		<ProjectReference Include="..\JordiAragonZaragoza.ToDos.Infrastructure.EntityFramework\JordiAragonZaragoza.ToDos.Infrastructure.EntityFramework.csproj" />
+		<ProjectReference Include="..\JordiAragonZaragoza.ToDos.Presentation.WebApi\JordiAragonZaragoza.ToDos.Presentation.WebApi.csproj" />
+		<ProjectReference Include="..\JordiAragonZaragoza.ToDos.Presentation.IntegrationMessages\JordiAragonZaragoza.ToDos.Presentation.IntegrationMessages.csproj" />
+	</ItemGroup>
+</Project>

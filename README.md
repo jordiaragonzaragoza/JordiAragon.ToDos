@@ -4,11 +4,14 @@ The ToDos Project is a project written in .NET 7.
 
 The goal of this project is implement the most common used technologies and practice to masterize the best way to develop great applications with .NET
 
+##  Give it a star ⭐
+Loving it? Please show your support by giving this project a star!
+
 ## How to use:
 - You will need the latest Visual Studio 2022 and the latest .NET Core SDK (at least .NET 7 SDK).
 - You will need also Docker Desktop running on your machine.
 - To use SetCoordinates on ToDoItem a Google Maps API Key is required.
-- To run the project just find and build the solution file JordiAragon.ToDos-Services.sln and use docker-compose as startup project.
+- To run the project just find and build the solution file JordiAragonZaragoza.ToDos-Services.sln and use docker-compose as startup project.
 
 ## Architecture:
 
@@ -27,11 +30,11 @@ The goal of this project is implement the most common used technologies and prac
 - Domain UnitTests
 
 ## Custom Shared Kernel:
-- This project uses [JordiAragon.SharedKernel v1.0.0](https://github.com/jordiaragonzaragoza/JordiAragon.SharedKernel) building blocks to follow DDD principles and Clean Architecture. 
+- This project uses [JordiAragon.SharedKernel v1.0.0](https://github.com/jordiaragonzaragoza/JordiAragonZaragoza.SharedKernel) building blocks to follow DDD principles and Clean Architecture. 
 
 ## Diagram:
 
-![JordiAragon.Cinema - Clean architecture graph](./docs/CleanArchitecture.jpg)
+![JordiAragonZaragoza.Cinema - Clean architecture graph](./docs/CleanArchitecture.jpg)
 
 ## Technologies implemented:
 
@@ -60,8 +63,8 @@ The goal of this project is implement the most common used technologies and prac
 ## Features (Pending to complete)
 
 **Separation of concerns by bounded context**
-- Check JordiAragon.ToDos.sln. It is a core domain which responsibility manage the ToDos.
-- Check JordiAragon.Message.sln. It is a message hub microservice which responsibility is to send messages as abstract hub.
+- Check JordiAragonZaragoza.ToDos.sln. It is a core domain which responsibility manage the ToDos.
+- Check JordiAragonZaragoza.Message.sln. It is a message hub microservice which responsibility is to send messages as abstract hub.
 
 **Account**
 - Generate JWT Bearer.
@@ -106,7 +109,7 @@ The goal of this project is implement the most common used technologies and prac
  - PerformanceBehaviour to track the execution time performance.
 
 ## See also this other repository which is the next step on this project.
-- [JordiAragon.Cinema](https://github.com/jordiaragonzaragoza/JordiAragon.Cinema) is microservices project with various bounded contexts and complex domain rules.
+- [JordiAragonZaragoza.Cinema](https://github.com/jordiaragonzaragoza/JordiAragonZaragoza.Cinema) is microservices project with various bounded contexts and complex domain rules.
 
 ## Resources and Inspiration
 
@@ -120,4 +123,10 @@ The goal of this project is implement the most common used technologies and prac
 
 ## About:
 
-The ToDos Project was developed by <a href="https://www.linkedin.com/in/jordiaragonzaragoza/" target="_blank">Jordi Aragón Zaragoza</a> 
+The ToDos Project was developed by <a href="https://www.linkedin.com/in/jordiaragonzaragoza/" target="_blank">Jordi Aragón Zaragoza</a>
+
+## License:
+
+[Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+[![Creative Commons License](https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-nd/4.0/)

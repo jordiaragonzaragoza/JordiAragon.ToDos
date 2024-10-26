@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  jordiaragon.todos:
+  jordiaragonzaragoza.todos:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:8080;http://+:8081
@@ -12,7 +12,7 @@ services:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
 
-  jordiaragon.messagehub:
+  jordiaragonzaragoza.messagehub:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:8443;http://+:8444
