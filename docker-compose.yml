@@ -1,31 +1,19 @@
 version: '3.4'
 
 services:
-  jordiaragon.todos:
-    image: ${DOCKER_REGISTRY-}jordiaragon.todos
-    container_name: jordiaragon.todos
+  jordiaragonzaragoza.todos:
+    image: ${DOCKER_REGISTRY-}jordiaragonzaragoza.todos
+    container_name: jordiaragonzaragoza.todos
     build:
       context: .
-      dockerfile: services/JordiAragon.ToDos/src/JordiAragon.ToDos/Dockerfile
-    depends_on:
-      - "azuresqledge"
-      - "rabbitmq"
-    links:
-      - "azuresqledge"
-      - "rabbitmq"
+      dockerfile: services/JordiAragonZaragoza.ToDos/src/JordiAragonZaragoza.ToDos/Dockerfile
 
-  jordiaragon.messagehub:
-    image: ${DOCKER_REGISTRY-}jordiaragon.messagehub
-    container_name: jordiaragon.messagehub
+  jordiaragonzaragoza.messagehub:
+    image: ${DOCKER_REGISTRY-}jordiaragonzaragoza.messagehub
+    container_name: jordiaragonzaragoza.messagehub
     build:
       context: .
-      dockerfile: services/JordiAragon.MessageHub/src/JordiAragon.MessageHub/Dockerfile
-    depends_on:
-      - "azuresqledge"
-      - "rabbitmq"
-    links:
-      - "azuresqledge"
-      - "rabbitmq"
+      dockerfile: services/JordiAragonZaragoza.MessageHub/src/JordiAragonZaragoza.MessageHub/Dockerfile
 
   azuresqledge:
     image: mcr.microsoft.com/azure-sql-edge:latest
